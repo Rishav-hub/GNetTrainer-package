@@ -197,9 +197,9 @@ Now all set to install the GNetTrainer Package
 ```python
 pip install GNetTrainer
 ```
-To start the Magic
+To start the Magic. In the terminal type
 ```terminal
->>gnet
+gnet
 ```
 
 
