@@ -1,8 +1,8 @@
-# Pycustomcalc - The simplest Python calculator out there!
+# GNetTrainer - Application for training and preicting classification models.
 
-Simple calculator for doing 4 simple arithmetic operations.
+![gnetimage](GNetTrainer/static/css/assets/img/GNet.png)
 
-
+Official Repository for GNetTrainer
 
 ## Usage
 
