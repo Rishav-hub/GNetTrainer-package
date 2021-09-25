@@ -1,0 +1,16 @@
+EPOCHS: 1
+FACTOR: 0.3
+FREEZE_ALL: true
+LOSS_FUNC: categorical_crossentropy
+MODEL_NAME: VGG16
+MODEL_OBJ: VGG16
+MONITOR: val_loss
+OPTIMIZER: Adam
+PATIENCE: 5
+SCHEDULER: true
+TENSORBOARD: true
+augmentation: true
+batch_size: 32
+dimension: 224, 224, 3
+train_dir: C:\Users\91992\DLCVNLP\Alexnet & Vgg\data\train
+val_dir: C:\Users\91992\DLCVNLP\Alexnet & Vgg\data\test

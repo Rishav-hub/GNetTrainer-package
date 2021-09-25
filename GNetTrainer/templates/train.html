@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNetTrainer</title>
+	<style>
+		*{
+		margin:0;
+		padding:0;
+		}
+	body{
+			
+		background-image: url('/static/css/assets/img/img.jpeg');
+		margin-top:40px;
+		background-position:center;
+		background-size:cover;
+		font-family:sans-serif;
+		}
+	
+		.regform{
+				width:800px;
+		background-color:rgb(0,0,0,0.6);
+		margin:auto;
+		color:#FFFFFF;
+		padding:10px 0px 10px 0px;
+		text-align:center;
+		border-radius:15px 15px 0px 0px ;
+		}  
+		.main{
+			background-color:rgb(0,0,0,0.5);
+		width:800px;
+		margin:auto;}
+		
+		form{
+			padding:10px;
+		
+		} 
+		
+		#name{
+			width:100%;
+		height:100px;
+		
+		}  
+		.name{
+			margin-left:25px;	
+		margin-top:10px;
+		width: 125px;
+				color: white;
+				font-size: 18px;
+				font-weight: 700;}
+	.firstname{
+			position: relative;
+			left:200px;
+			top:-37px;
+			line-height: 40px;
+			border-radius: 6px;
+			padding: 0 22px;
+			font-size: 16px;
+			
+			}
+	.lastname{
+			position: relative;
+			left:417px;
+			top:-80px;
+			line-height: 40px;
+			border-radius: 6px;
+			padding: 0 22px;
+			font-size: 16px;
+			color:#555;       
+						}  
+	.firstlabel{
+				position:relative;
+				color:#E5E5E5;    
+			text-transform: capitalize;
+		font-size: 14px;
+		left:203px;
+		top:-45px;
+		}   
+	.lastlabel{
+				position:relative;
+		color:#E5E5E5;
+		text-transform:capitalize;
+		font-size:14px;
+		left:492px;
+		top:-76px;
+		} 
+	.company{
+		position: relative;
+		left:200px;
+		top:-37px;
+		line-height: 40px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;  }
+	.email{
+		position: relative;
+		left:200px;
+		top:-37px;
+		line-height: 40px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;  
+		}     
+	
+		.Code{
+			position:relative;
+		left:200px;
+		top:-37px;
+		line-height: 40px;
+		width:95px;
+			border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;  
+		}
+	.number{
+			position:relative;
+		left:200px;
+		top:-37px;
+		line-height: 40px;
+		width:255px;
+			border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555; 
+		}
+	.area-code{
+				position:relative;
+			color:#E5E5E5;
+			text-transform:capitalize;
+			font-size:16px;
+			left:54px;
+			top:-4px;
+		}
+	.phone-number{
+					position:relative;
+			color:#E5E5E5;
+			text-transform:capitalize;
+			font-size:16px;
+			left:-100px;
+			top:-2px;
+		}
+	.option{
+			position:relative;
+		left:200px;
+		top:-37px;
+		line-height: 40px;
+		width:532px;
+		height:40px;
+			border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555; 
+		outline:none;
+		overflow:hidden;
+		}    
+		.option option{
+					font-size:20px;
+			}
+		#coustomer{
+					margin-left:25px;
+		color:white;
+		font-size:18px;
+		
+			} 
+		.radio{
+			display:inline-block;
+		padding-right:70px;
+		font-size:25px;
+		margin-left:25px;
+		margin-top:15px;
+		color:white;
+		}
+		.radio input{
+					width:20px;
+		height:20px;
+		border-radius:50%;
+		cursor:pointer;
+		outline:none;
+		} 
+		button{
+		background-color:#3BAF9F;
+		display:block;
+		margin:20px 0px 0px 20px;
+		text-align:center;
+		border-radius:12px;
+		border:2px solid #366473;
+		padding:14px 110px;
+		outline:none;
+		color:white;
+		cursor:pointer;
+		transition:0.25px;
+		} 
+		button:hover{
+					background-color:#5390F5;
+		}  
+	</style>
+</head>
+<body>
+    <div class="regform">
+        <h1>GNetTrainer</h1>
+</div>
+<div class="main">
+    
+        <form method="POST", action="/train">
+            <div id="name">
+                <h2 class="name"> Directories </h2>
+				<input class="firstname" type="text" name="TRAIN_DIR" id="TRAIN_DIR" placeholder="TRAIN_DIR"><br>
+                <label class="firstlabel" for="TRAIN_DIR">Training</label>
+                <input class="lastname" type="text" name="VAL_DIR" id="VAL_DIR" placeholder="VAL_DIR"><br>
+                <label class="lastlabel">Validation</label>
+            </div>
+			<h2 class="name"> Dimension </h2>
+			<input class="company" type="text" name="DIMENSION" id="DIMENSION" placeholder="DIMENSION">
+            <h2 class="name"> Batch Size</h2>
+			<input class="email" type="text" name="BATCH_SIZE" id="BATCH_SIZE" placeholder="BATCH_SIZE">
+            <h2 class="name">Augmentation</h2>
+			<select class="option" name="AUGMENTATION" id="AUGMENTATION">
+                <option disabled="disabled" selected="selected">--Choose option--</option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+            <h2 class="name">Choose a Model</h2>
+			<select class="option" name="MODEL_OBJ" id="MODEL_OBJ">
+                <option disabled="disabled" selected="selected">--Choose option--</option>
+                <option value="Xception">Xception</option>
+                          <option value="VGG16">VGG16</option>
+                          <option value="VGG19">VGG19</option>
+                          <option value="ResNet50">ResNet50</option>
+                          <option value="ResNet101">ResNet101</option>
+                          <option value="ResNet152">ResNet152</option>
+                          <option value="ResNet50V2">ResNet50V2</option>
+                          <option value="ResNet101V2">ResNet101V2</option>
+                          <option value="ResNet152V2">ResNet152V2</option>
+                          <option value="InceptionV3">InceptionV3</option>
+                          <option value="MobileNet">MobileNet</option>
+                          <option value="MobileNetV2">MobileNetV2</option>
+                          <option value="DenseNet121">DenseNet121</option>
+                          <option value="DenseNet169">DenseNet169</option>
+                          <option value="DenseNet201">DenseNet201</option>
+                          <option value="NASNetMobile">NASNetMobile</option>
+                          <option value="EfficientNetB0">EfficientNetB0</option>
+                          <option value="EfficientNetB1">EfficientNetB1</option>
+                          <option value="EfficientNetB2">EfficientNetB2</option>
+            </select>
+            <h2 class="name">Model Name</h2>
+			<select class="option" name="MODEL_NAME" id="MODEL_NAME">
+                <option disabled="disabled" selected="selected">--Choose option--</option>
+                <option value="Xception">Xception</option>
+                          <option value="VGG16">VGG16</option>
+                          <option value="VGG19">VGG19</option>
+                          <option value="ResNet50">ResNet50</option>
+                          <option value="ResNet101">ResNet101</option>
+                          <option value="ResNet152">ResNet152</option>
+                          <option value="ResNet50V2">ResNet50V2</option>
+                          <option value="ResNet101V2">ResNet101V2</option>
+                          <option value="ResNet152V2">ResNet152V2</option>
+                          <option value="InceptionV3">InceptionV3</option>
+                          <option value="MobileNet">MobileNet</option>
+                          <option value="MobileNetV2">MobileNetV2</option>
+                          <option value="DenseNet121">DenseNet121</option>
+                          <option value="DenseNet169">DenseNet169</option>
+                          <option value="DenseNet201">DenseNet201</option>
+                          <option value="NASNetMobile">NASNetMobile</option>
+                          <option value="EfficientNetB0">EfficientNetB0</option>
+                          <option value="EfficientNetB1">EfficientNetB1</option>
+                          <option value="EfficientNetB2">EfficientNetB2</option>
+            </select>
+			<h2 class="name"> Epochs</h2>
+			<input class="email" type="text" name="EPOCHS" id="EPOCHS" placeholder="EPOCHS">
+			<h2 class="name"> Optimizer</h2>
+			<input class="email" type="text" name="OPTIMIZER" id="OPTIMIZER" placeholder="OPTIMIZER">
+			<h2 class="name"> Loss Function</h2>
+			<input class="email" type="text" name="LOSS_FUNC" id="LOSS_FUNC" placeholder="LOSS_FUNC">
+			<h2 class="name">Freeze Layers</h2>
+			<select class="option" name="FREEZE_ALL" id="FREEZE_ALL">
+                <option disabled="disabled" selected="selected">--Choose option--</option>
+                <option>True</option>
+                <option>False</option>
+			</select>
+			<h2 class="name">Enable Tensorboard</h2>
+			<select class="option" name="TENSORBOARD" id="TENSORBOARD">
+                <option disabled="disabled" selected="selected">--Choose option--</option>
+                <option>True</option>
+                <option>False</option>
+			</select>
+			<h2 class="name">Enable Scheduler</h2>
+			<select class="option" name="SCHEDULER" id="SCHEDULER">
+                <option disabled="disabled" selected="selected">--Choose option--</option>
+                <option>True</option>
+                <option>False</option>
+			</select>
+			<h2 class="name"> Monitor</h2>
+			<input class="email" type="text" name="MONITOR" id="MONITOR" placeholder="MONITOR">
+			<h2 class="name"> Patience</h2>
+			<input class="email" type="text" name="PATIENCE" id="PATIENCE" placeholder="PATIENCE">
+			<h2 class="name"> Factor</h2>
+			<input class="email" type="text" name="FACTOR" id="FACTOR" placeholder="FACTOR">
+            	<button type="submit">Train</button>
+			
+			
+    
+    
+        </form>
+		</form>
+
+
+			<form action="/test" method="get">
+				<h2 class="name"> Click here to Predict</h2>
+					<button type="submit">Predict</button>
+				
+							
+		</form>
+</div>
+</body>
+</html>
