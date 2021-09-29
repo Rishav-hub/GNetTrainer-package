@@ -204,4 +204,22 @@ To start the Magic. In the terminal type
 gnet
 ```
 
+## Demo
+
+### Home Page
+![home](GNetTrainer/static/css/assets/img/home.JPG)
+
+### Training Page
+
+![train1](GNetTrainer/static/css/assets/img/train1.JPG)
+
+![train2](GNetTrainer/static/css/assets/img/train2.JPG)
+
+### Prediction Page
+
+![Predict](GNetTrainer/static/css/assets/img/predict.JPG)
+
+
+
+
 
