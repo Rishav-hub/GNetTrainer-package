@@ -2,7 +2,9 @@
 
 ![gnetimage](GNetTrainer/static/css/assets/img/GNet.png)
 
-Official Repository for GNetTrainer
+Official Repository for GNetTrainer.
+
+You can find the Package here- https://pypi.org/project/GNetTrainer/
 
 ## Author
 
