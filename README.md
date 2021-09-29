@@ -1,4 +1,4 @@
-# GNetTrainer - Application for training and preicting classification models.
+# GNetTrainer - Application for training and predicting classification models.
 
 ![gnetimage](GNetTrainer/static/css/assets/img/GNet.png)
 
