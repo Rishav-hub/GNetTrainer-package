@@ -3,7 +3,7 @@ import os
 from GNetTrainer.utils.model_config import return_model
 from GNetTrainer.utils.close_match import get_match as gm
 
-config = process_config(r"\GNetTrainer-package\GNetTrainer\config.yaml")
+config = process_config("config.yaml")
 
 print("Entered input file")
 ## Data configs
